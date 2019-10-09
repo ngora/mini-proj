@@ -14,4 +14,8 @@ awk '$1=="ATOM" || $1=="HETATM" || $1=="TER" || $1=="END"' 2GIV.pdb > 2GIV_clean
 <p>Manually, we delete the residues between ALY101 to PRO274 and the ligand ACO in the pdb
 2GIV_clean1.pdb and save it as  2GIV_clean2.pdb</p>
 
+<p>For renumbering IDs we use pdb4amber</p>
+
+pdb4amber -i 2GIV_clean2.pdb > 2GIV_clean3.pdb
+
 
