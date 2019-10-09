@@ -32,38 +32,43 @@
 <p>
 <font color="blue">load ff14SB force field <font color="red">(I had a problem:leaprc.ff14SB was not found. Solved: I added all possible paths to $AMBERHOME/bin/tleap shell script as it was indicated on <em>http://archive.ambermd.org/201605/0245.html</em> also $AMBEHROME/amber/dat/mtkpp/ZAFF/201108/ path added for necessary files for ZAFF)</font></font>:
 <pre><code>source leaprc.ff14SB</code></pre> 
+Add atom types for the ZAFF metal center with Center ID 4:
 <pre><code>addAtomTypes { { "ZN" "Zn" "sp3" } { "S3" "S" "sp3" } { "N2" "N" "sp3" } }</code> </pre>
-<font color="blue">#Add atom types for the ZAFF metal center with Center ID 4</font>
+Load the library for atomic ions:
 <pre><code>loadoff atomic_ions.lib</code></pre> 
-#Load the library for atomic ions
+Load the frcmod file for monovalent metal ions <font color="red">(amber16 hasn't this file. It was loaded from <em>https://github.com/ParmEd/ParmEd/blob/master/test/files/parm/frcmod.ions1lsm_hfe_tip3p</em> to the AMBER'S parm directory): 
 <pre><code>loadamberparams frcmod.ions1lsm_hfe_tip3p</code></pre>
-#Load the frcmod file for monovalent metal ions <font color="red">(amber16 hasn't this file. It was loaded from <em>https://github.com/ParmEd/ParmEd/blob/master/test/files/parm/frcmod.ions1lsm_hfe_tip3p</em> to the AMBER'S parm directory) 
+Load ZAFF prep file:
 <pre><code>loadamberprep ZAFF.prep</code></pre>
-#Load ZAFF prep file
+Load ZAFF frcmod file:
 <pre><code>loadamberparams ZAFF.frcmod</code></pre>
-#Load ZAFF frcmod file
+Load the PDB file:
 <pre><code>mol = loadpdb 2GIV_ZAFF.pdb</code></pre>
-#Load the PDB file
+Bond zinc ion with SG atom of residue CYM34:
 <pre><code>bond mol.98.ZN mol.34.SG</code></pre>
-#Bond zinc ion with SG atom of residue CYM34
+Bond zinc ion with SG atom of residue CYM37:
 <pre><code>bond mol.98.ZN mol.37.SG</code></pre>
-#Bond zinc ion with SG atom of residue CYM37
+Bond zinc ion with SG atom of residue HID50:
 <pre><code>bond mol.98.ZN mol.50.NE2</code></pre>
-#Bond zinc ion with SG atom of residue HID50
+Bond zinc ion with SG atom of residue CYM54:
 <pre><code>bond mol.98.ZN mol.54.SG</code></pre>
-#Bond zinc ion with SG atom of residue CYM54
+Save the pdb file:
 <pre><code>savepdb mol 2GIV_ZAFF_dry.pdb</code></pre>
-#Save the pdb file
+Save the topology and coordiante files:
 <pre><code>saveamberparm mol 2GIV_ZAFF_dry.prmtop 2GIV_ZAFF_dry.inpcrd</code></pre>
-#Save the topology and coordiante files
+Solvate the system using TIP3P water box:
 <pre><code>solvatebox mol TIP3PBOX 10.0</code></pre>
-#Solvate the system using TIP3P water box
+Neutralize the system using Cl- ions:
 <pre><code>addions mol CL 0</code></pre>
-#Neutralize the system using Cl- ions
+Save the pdb file:
 <pre><code>savepdb mol 2GIV_ZAFF_solv.pdb</code></pre>
-#Save the pdb file
+Save the topology and coordiante files:
 <pre><code>saveamberparm mol 2GIV_ZAFF_solv.prmtop 2GIV_ZAFF_solv.inpcrd</code></pre> 
-#Save the topology and coordiante files
+Quit tleap:
 <pre><code>quit</code></pre>
-#Quit tleap
 
+<h2>4. MD</h2>
+<p>Input files of minimization, heating and production were performed as here: http://ambermd.org/tutorials/basic/tutorial0/index.htm</p>
+
+<p>Run minimization</p>
+<pre><code>
