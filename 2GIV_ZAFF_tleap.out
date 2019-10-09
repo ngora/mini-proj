@@ -1,0 +1,186 @@
+-I: Adding /home/ngora/amber16/dat/leap/prep to search path.
+-I: Adding /home/ngora/amber16/dat/leap/prep/oldff to search path.
+-I: Adding /home/ngora/amber16/dat/leap/lib to search path.
+-I: Adding /home/ngora/amber16/dat/leap/lib/oldff to search path.
+-I: Adding /home/ngora/amber16/dat/leap/parm to search path.
+-I: Adding /home/ngora/amber16/dat/leap/cmd to search path.
+-I: Adding /home/ngora/amber16/dat/leap/cmd/oldff to search path.
+-I: Adding /home/ngora/amber16/dat/mtkpp/ZAFF/201108 to search path.
+-s: Ignoring startup file: leaprc
+-f: Source 2GIV_ZAFF_tleap.in.
+
+Welcome to LEaP!
+Sourcing: ./2GIV_ZAFF_tleap.in
+----- Source: /home/ngora/amber16/dat/leap/cmd/oldff/leaprc.ff14SB
+----- Source of /home/ngora/amber16/dat/leap/cmd/oldff/leaprc.ff14SB done
+Log file: ./leap.log
+Loading parameters: /home/ngora/amber16/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /home/ngora/amber16/dat/leap/parm/frcmod.ff14SB
+Reading force field modification type file (frcmod)
+Reading title:
+ff14SB protein backbone and sidechain parameters
+Loading library: /home/ngora/amber16/dat/leap/lib/amino12.lib
+Loading library: /home/ngora/amber16/dat/leap/lib/aminoct12.lib
+Loading library: /home/ngora/amber16/dat/leap/lib/aminont12.lib
+Loading library: /home/ngora/amber16/dat/leap/lib/nucleic12.lib
+Loading library: /home/ngora/amber16/dat/leap/lib/atomic_ions.lib
+Loading library: /home/ngora/amber16/dat/leap/lib/solvents.lib
+Loading library: /home/ngora/amber16/dat/leap/lib/atomic_ions.lib
+Loading parameters: /home/ngora/amber16/dat/leap/parm/frcmod.ions1lsm_hfe_tip3p
+Reading force field modification type file (frcmod)
+Reading title:
+Monovalent ion parameters(HFE set) for Particle Mesh Ewald and TIP3P water model from Li, Song and Merz (JCTC, 2015, 11, 1645-1657)
+Loading Prep file: /home/ngora/amber16/dat/leap/prep/ZAFF.prep
+Loading parameters: /home/ngora/amber16/dat/leap/parm/ZAFF.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+ZAFF parameter set created by MTK++/MCPB 
+Loading PDB file: ./2GIV_ZAFF.pdb
+ (starting new molecule for chain A)
+  Added missing heavy atom: .R<GLU 23>.A<CG 8>
+  Added missing heavy atom: .R<GLU 23>.A<CD 11>
+  Added missing heavy atom: .R<GLU 23>.A<OE1 12>
+  Added missing heavy atom: .R<GLU 23>.A<OE2 13>
+  Added missing heavy atom: .R<ASP 24>.A<CG 8>
+  Added missing heavy atom: .R<ASP 24>.A<OD1 9>
+  Added missing heavy atom: .R<ASP 24>.A<OD2 10>
+  Added missing heavy atom: .R<LYS 27>.A<CB 5>
+  Added missing heavy atom: .R<LYS 27>.A<CG 8>
+  Added missing heavy atom: .R<LYS 27>.A<CD 11>
+  Added missing heavy atom: .R<LYS 27>.A<CE 14>
+  Added missing heavy atom: .R<LYS 27>.A<NZ 17>
+  Added missing heavy atom: .R<GLN 28>.A<CB 5>
+  Added missing heavy atom: .R<GLN 28>.A<CG 8>
+  Added missing heavy atom: .R<GLN 28>.A<CD 11>
+  Added missing heavy atom: .R<GLN 28>.A<OE1 12>
+  Added missing heavy atom: .R<GLN 28>.A<NE2 13>
+  Added missing heavy atom: .R<CHIE 97>.A<OXT 18>
+  total atoms in file: 1006
+  Leap added 1197 missing atoms according to residue templates:
+       18 Heavy
+       1179 H / lone pairs
+Writing pdb file: 2GIV_ZAFF_dry.pdb
+ Converting N-terminal residue name to PDB format: NLYS -> LYS
+ Converting C-terminal residue name to PDB format: CHIE -> HIE
+Checking Unit.
+WARNING: There is a bond of 18.086519 angstroms between: 
+-------  .R<CY3 34>.A<SG 8> and .R<ZN3 98>.A<ZN 1>
+WARNING: There is a bond of 15.690249 angstroms between: 
+-------  .R<CY3 37>.A<SG 8> and .R<ZN3 98>.A<ZN 1>
+WARNING: There is a bond of 16.959657 angstroms between: 
+-------  .R<HD1 50>.A<NE2 13> and .R<ZN3 98>.A<ZN 1>
+WARNING: There is a bond of 19.465840 angstroms between: 
+-------  .R<CY3 54>.A<SG 8> and .R<ZN3 98>.A<ZN 1>
+WARNING: The unperturbed charge of the unit: 1.000020 is not zero.
+
+ -- ignoring the warnings.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+old PREP-specified impropers:
+ <CY3 34>:  -M   CA   N    HN  
+ <CY3 34>:  CA   +M   C    O   
+ <CY3 37>:  -M   CA   N    HN  
+ <CY3 37>:  CA   +M   C    O   
+ <HD1 50>:  -M   CA   N    H   
+ <HD1 50>:  CA   +M   C    O   
+ <HD1 50>:  CG   CE1  ND1  HD1 
+ <HD1 50>:  CG   NE2  CD2  HD2 
+ <HD1 50>:  ND1  NE2  CE1  HE1 
+ <HD1 50>:  ND1  CD2  CG   CB  
+ <CY3 54>:  -M   CA   N    HN  
+ <CY3 54>:  CA   +M   C    O   
+ total 358 improper torsions applied
+ 12 improper torsions in old prep form
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	CHIE	1
+	NLYS	1
+	WAT	185
+  )
+ (no restraints)
+  Solute vdw bounding box:              55.900 46.241 61.946
+  Total bounding box for atom centers:  75.900 66.241 81.946
+  Solvent unit box:                     18.774 18.774 18.774
+  Total vdw box size:                   79.094 69.334 84.508 angstroms.
+  Volume: 463433.172 A^3 
+  Total mass 224025.904 amu,  Density 0.803 g/cc
+  Added 11587 residues.
+1 CL ion required to neutralize.
+Adding 1 counter ions to "mol" using 1A grid
+Grid extends from solute vdw + 2.25  to  8.50
+Resolution:      1.00 Angstrom.
+grid build: 0 sec
+Solvent present: replacing closest with ion
+	 when steric overlaps occur
+Calculating grid charges
+charges: 2 sec
+(Replacing solvent molecule)
+Placed CL in mol at (-11.44, -2.61, -31.42).
+
+Done adding ions.
+Writing pdb file: 2GIV_ZAFF_solv.pdb
+   printing CRYST1 record to PDB file with box info
+ Converting N-terminal residue name to PDB format: NLYS -> LYS
+ Converting C-terminal residue name to PDB format: CHIE -> HIE
+Checking Unit.
+WARNING: There is a bond of 18.086519 angstroms between: 
+-------  .R<CY3 34>.A<SG 8> and .R<ZN3 98>.A<ZN 1>
+WARNING: There is a bond of 15.690249 angstroms between: 
+-------  .R<CY3 37>.A<SG 8> and .R<ZN3 98>.A<ZN 1>
+WARNING: There is a bond of 16.959657 angstroms between: 
+-------  .R<HD1 50>.A<NE2 13> and .R<ZN3 98>.A<ZN 1>
+WARNING: There is a bond of 19.465840 angstroms between: 
+-------  .R<CY3 54>.A<SG 8> and .R<ZN3 98>.A<ZN 1>
+
+ -- ignoring the warnings.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+old PREP-specified impropers:
+ <CY3 34>:  -M   CA   N    HN  
+ <CY3 34>:  CA   +M   C    O   
+ <CY3 37>:  -M   CA   N    HN  
+ <CY3 37>:  CA   +M   C    O   
+ <HD1 50>:  -M   CA   N    H   
+ <HD1 50>:  CA   +M   C    O   
+ <HD1 50>:  CG   CE1  ND1  HD1 
+ <HD1 50>:  CG   NE2  CD2  HD2 
+ <HD1 50>:  ND1  NE2  CE1  HE1 
+ <HD1 50>:  ND1  CD2  CG   CB  
+ <CY3 54>:  -M   CA   N    HN  
+ <CY3 54>:  CA   +M   C    O   
+ total 358 improper torsions applied
+ 12 improper torsions in old prep form
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	CHIE	1
+	NLYS	1
+	WAT	11771
+  )
+ (no restraints)
+	Quit
