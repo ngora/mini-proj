@@ -8,7 +8,7 @@
 
 <h2>1. Clean up pdb file and add hydrogen atoms</p></h2>
 <p>leave information of atoms only in pdb:</p>
-awk '$1=="ATOM" || $1=="HETATM" || $1=="TER" || $1=="END"' 2GIV.pdb > 2GIV_clean1.pdb
+<code>awk '$1=="ATOM" || $1=="HETATM" || $1=="TER" || $1=="END"' 2GIV.pdb > 2GIV_clean1.pdb</code>
 
 
 <p>Manually, we delete the residues between ALY101 to PRO274 and the ligand ACO in the pdb
@@ -16,6 +16,6 @@ awk '$1=="ATOM" || $1=="HETATM" || $1=="TER" || $1=="END"' 2GIV.pdb > 2GIV_clean
 
 <p>For renumbering IDs we use pdb4amber</p>
 
-pdb4amber -i 2GIV_clean2.pdb > 2GIV_clean3.pdb
+<code>pdb4amber -i 2GIV_clean2.pdb > 2GIV_clean3.pdb</code>
 
-
+<p>HIS residues protonation state was not determine (can be done through H++ website</p>)
