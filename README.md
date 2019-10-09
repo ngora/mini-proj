@@ -24,27 +24,46 @@
 
 <p>We manually rename CYS34, CYS37, HIS50, CYS54 residues (ligands) and ZN98 (Zn) of 2GIV_clean3.pdb file accordingly to ZAFF format (CYS to CY3, HIS to HD1, ZN to ZN3)</p>
 
+<p></p>
 <h2>3. Using tleap for modeling</h2>
 <p>We use the most recent AMBER force field FF14SB for modeling</p>
 
 <p><strong>2GIV_ZAFF_tleap.in input file:</strong></p>
 <p>
-<pre><code>source leaprc.ff14SB</code> #load ff14SB force field <font color="red">(I had a problem:leaprc.ff14SB was not found. Solved: I added all possible paths to $AMBERHOME/bin/tleap shell script as it was indicated on <em>http://archive.ambermd.org/201605/0245.html</em> also $AMBEHROME/amber/dat/mtkpp/ZAFF/201108/ path added for necessary files for ZAFF)</font></pre>
-<pre><code>addAtomTypes { { "ZN" "Zn" "sp3" } { "S3" "S" "sp3" } { "N2" "N" "sp3" } }</code> #Add atom types for the ZAFF metal center with Center ID 4</pre>
-<code>loadoff atomic_ions.lib</code> #Load the library for atomic ions
-<code>loadamberparams frcmod.ions1lsm_hfe_tip3p</code> #Load the frcmod file for monovalent metal ions <font color="red">(amber16 hasn't this file. It was loaded from <em>https://github.com/ParmEd/ParmEd/blob/master/test/files/parm/frcmod.ions1lsm_hfe_tip3p</em> to the AMBER'S parm directory) 
-loadamberprep ZAFF.prep #Load ZAFF prep file
-loadamberparams ZAFF.frcmod #Load ZAFF frcmod file
-mol = loadpdb 2GIV_ZAFF.pdb #Load the PDB file
-bond mol.98.ZN mol.34.SG #Bond zinc ion with SG atom of residue CYM34
-bond mol.98.ZN mol.37.SG #Bond zinc ion with SG atom of residue CYM37
-bond mol.98.ZN mol.50.NE2 #Bond zinc ion with SG atom of residue HID50
-bond mol.98.ZN mol.54.SG #Bond zinc ion with SG atom of residue CYM54
-savepdb mol 2GIV_ZAFF_dry.pdb #Save the pdb file
-saveamberparm mol 2GIV_ZAFF_dry.prmtop 2GIV_ZAFF_dry.inpcrd #Save the topology and coordiante files
-solvatebox mol TIP3PBOX 10.0 #Solvate the system using TIP3P water box
-addions mol CL 0 #Neutralize the system using Cl- ions
-savepdb mol 2GIV_ZAFF_solv.pdb #Save the pdb file
-saveamberparm mol 2GIV_ZAFF_solv.prmtop 2GIV_ZAFF_solv.inpcrd #Save the topology and coordiante files
-quit #Quit tleap
+<pre><code>source leaprc.ff14SB</code></pre> 
+<font color="blue">load ff14SB force field <font color="red">(I had a problem:leaprc.ff14SB was not found. Solved: I added all possible paths to $AMBERHOME/bin/tleap shell script as it was indicated on <em>http://archive.ambermd.org/201605/0245.html</em> also $AMBEHROME/amber/dat/mtkpp/ZAFF/201108/ path added for necessary files for ZAFF)</font></font>
+<pre><code>addAtomTypes { { "ZN" "Zn" "sp3" } { "S3" "S" "sp3" } { "N2" "N" "sp3" } }</code> </pre>
+<font color="blue">#Add atom types for the ZAFF metal center with Center ID 4</font>
+<pre><code>loadoff atomic_ions.lib</code></pre> 
+#Load the library for atomic ions
+<pre><code>loadamberparams frcmod.ions1lsm_hfe_tip3p</code></pre>
+#Load the frcmod file for monovalent metal ions <font color="red">(amber16 hasn't this file. It was loaded from <em>https://github.com/ParmEd/ParmEd/blob/master/test/files/parm/frcmod.ions1lsm_hfe_tip3p</em> to the AMBER'S parm directory) 
+<pre><code>loadamberprep ZAFF.prep</code></pre>
+#Load ZAFF prep file
+<pre><code>loadamberparams ZAFF.frcmod</code></pre>
+#Load ZAFF frcmod file
+<pre><code>mol = loadpdb 2GIV_ZAFF.pdb</code></pre>
+#Load the PDB file
+<pre><code>bond mol.98.ZN mol.34.SG</code></pre>
+#Bond zinc ion with SG atom of residue CYM34
+<pre><code>bond mol.98.ZN mol.37.SG</code></pre>
+#Bond zinc ion with SG atom of residue CYM37
+<pre><code>bond mol.98.ZN mol.50.NE2</code></pre>
+#Bond zinc ion with SG atom of residue HID50
+<pre><code>bond mol.98.ZN mol.54.SG</code></pre>
+#Bond zinc ion with SG atom of residue CYM54
+<pre><code>savepdb mol 2GIV_ZAFF_dry.pdb</code></pre>
+#Save the pdb file
+<pre><code>saveamberparm mol 2GIV_ZAFF_dry.prmtop 2GIV_ZAFF_dry.inpcrd</code></pre>
+#Save the topology and coordiante files
+<pre><code>solvatebox mol TIP3PBOX 10.0</code></pre>
+#Solvate the system using TIP3P water box
+<pre><code>addions mol CL 0</code></pre>
+#Neutralize the system using Cl- ions
+<pre><code>savepdb mol 2GIV_ZAFF_solv.pdb</code></pre>
+#Save the pdb file
+<pre><code>saveamberparm mol 2GIV_ZAFF_solv.prmtop 2GIV_ZAFF_solv.inpcrd</code></pre> 
+#Save the topology and coordiante files
+<pre><code>quit</code></pre>
+#Quit tleap
 
