@@ -29,7 +29,7 @@
 
 <p><strong>2GIV_ZAFF_tleap.in input file:</strong></p>
 <p>
-<p><code>source leaprc.ff14SB</code></p> #load ff14SB force field <font color="red">(I had a problem:leaprc.ff14SB was not found. Solved: I added all possible paths to $AMBERHOME/bin/tleap shell script as it was indicated on <em>http://archive.ambermd.org/201605/0245.html</em>)</font>
+<pre><code>source leaprc.ff14SB</code></pre> #load ff14SB force field <font color="red">(I had a problem:leaprc.ff14SB was not found. Solved: I added all possible paths to $AMBERHOME/bin/tleap shell script as it was indicated on <em>http://archive.ambermd.org/201605/0245.html</em> also ZAFF.frcmod and ZAFF.prep were added to leap directory)</font>
 <p><code>addAtomTypes { { "ZN" "Zn" "sp3" } { "S3" "S" "sp3" } { "N2" "N" "sp3" } }</code></p> #Add atom types for the ZAFF metal center with Center ID 4
 <code>loadoff atomic_ions.lib</code> #Load the library for atomic ions
 <code>loadamberparams frcmod.ions1lsm_hfe_tip3p</code> #Load the frcmod file for monovalent metal ions <font color="red">(amber16 hasn't this file. It was loaded from <em>https://github.com/ParmEd/ParmEd/blob/master/test/files/parm/frcmod.ions1lsm_hfe_tip3p</em> to the AMBER'S parm directory) 
