@@ -1,0 +1,44 @@
+
+          -------------------------------------------------------
+          Amber 16 SANDER                              2016
+          -------------------------------------------------------
+
+| Run on 10/09/2019 at 17:24:49
+
+|   Executable path: /home/ngora/amber16/bin/sander
+| Working directory: /home/ngora/Documents/mini-proj/MD
+|          Hostname: Unknown
+  [-O]verwriting output
+
+File Assignments:
+|  MDIN: 01_Min.in                                                             
+| MDOUT: 01_Min.out                                                            
+|INPCRD: inpcrd                                                                
+|  PARM: prmtop                                                                
+|RESTRT: 01_Min.ncrst                                                          
+|  REFC: refc                                                                  
+| MDVEL: mdvel                                                                 
+| MDFRC: mdfrc                                                                 
+|  MDEN: mden                                                                  
+| MDCRD: mdcrd                                                                 
+|MDINFO: 01_Min.mdinfo                                                         
+|  MTMD: mtmd                                                                  
+|INPDIP: inpdip                                                                
+|RSTDIP: rstdip                                                                
+|INPTRA: inptraj                                                               
+
+
+ Here is the input file:
+
+Minimize                                                                       
+&cntrl                                                                         
+  imin = 1, maxcyc = 1000, ntmin = 2,                                          
+  ntx = 1, ntc = 2, ntf = 1,                                                   
+  ntb = 1, ntp = 0,                                                            
+  ntwx = 1000, ntwe = 0, ntpr = 1000,                                          
+  scee = 1.2, cut = 8.0,                                                       
+  ntr = 1,                                                                     
+  restraintmask = ':1-119 & !@H=',                                             
+  restraint_wt=5.0,                                                            
+/                                                                              
+ error in reading namelist cntrl

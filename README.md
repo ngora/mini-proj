@@ -69,8 +69,8 @@ Quit tleap:
 
 <h2>4. MD</h2>
 <p>Input files of minimization, heating and production were performed as here: http://ambermd.org/tutorials/basic/tutorial0/index.htm</p>
-
-<p>Run minimization</p>
+<p></p>
+Run minimization:
 <pre><code>$AMBERHOME/bin/sander -O -i 01_Min.in -o 01_Min.out -p prmtop -c inpcrd -r 01_Min.ncrst \
  -inf 01_Min.mdinfo</code></pre>
 
