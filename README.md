@@ -71,7 +71,14 @@ Quit tleap:
 <p>Input files of minimization, heating and production were performed as here: http://ambermd.org/tutorials/basic/tutorial0/index.htm</p>
 <p></p>
 Run minimization:
-<pre><code>$AMBERHOME/bin/sander -O -i 01_Min.in -o 01_Min.out -p prmtop -c inpcrd -r 01_Min.ncrst \
- -inf 01_Min.mdinfo</code></pre>
+<pre><code>$AMBERHOME/bin/sander -O -i 01_Min.in -o 01_Min.out -c 2GIV_ZAFF_solv.inpcrd -p 2GIV_ZAFF_solv.prmtop -r 01_Min.ncrst</code></pre>
+<p></p>
+
+Run heating:
+<pre><code> $AMBERHOME/bin/sander -O -i 02_Heat.in -o 02_Heat.out -c 01_Min.ncrst -p 2GIV_ZAFF_solv.prmtop -r 02_Heat.ncrst -x 02_Heat.nc</code></pre>
+
+Run production:
+<pre><code> $AMBERHOME/bin/sander -O -i 03_Prod.in -o 03_Prod.out -c 02_Heat.ncrst -p 2GIV_ZAFF_solv.prmtop -r 03_Prod.ncrst -x 03_Prod.nc</code></pre>
+
 
 
