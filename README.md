@@ -30,7 +30,7 @@
 
 <p><strong>2GIV_ZAFF_tleap.in input file:</strong></p>
 <p>
-<style color="blue">load ff14SB force field <font color="red">(I had a problem:leaprc.ff14SB was not found. Solved: I added all possible paths to $AMBERHOME/bin/tleap shell script as it was indicated on <em>http://archive.ambermd.org/201605/0245.html</em> also $AMBEHROME/amber/dat/mtkpp/ZAFF/201108/ path added for necessary files for ZAFF)</font></style>:
+Load ff14SB force field (I had a problem:leaprc.ff14SB was not found. Solved: I added all possible paths to $AMBERHOME/bin/tleap shell script as it was indicated on <em>http://archive.ambermd.org/201605/0245.html</em> also $AMBEHROME/amber/dat/mtkpp/ZAFF/201108/ path added for necessary files for ZAFF):
 <pre><code>source leaprc.ff14SB</code></pre> 
 Add atom types for the ZAFF metal center with Center ID 4:
 <pre><code>addAtomTypes { { "ZN" "Zn" "sp3" } { "S3" "S" "sp3" } { "N2" "N" "sp3" } }</code> </pre>
