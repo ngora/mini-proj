@@ -90,7 +90,7 @@ Run production (The number of MD steps(<strong>nstlim</strong>) was reduced to 8
 
 <p>In Chimera, the ligand residues and Zn atom with distances were generated (Fig. 2)</p>
 
-![](Results/2GIV_ZAFF_Chimera.gif)
+![](Results/2GIV_ZAFF_Chimera1.gif)
 
 <p><strong>Figure 2.</strong> Tetrahedral coordination complex of 2GIV ZAFF</p>
 
