@@ -1,0 +1,4 @@
+trajin 02_Heat.nc
+trajin 03_Prod.nc
+reference 01_Min.ncrst
+rms reference :1-97@CA out 1_97.rms

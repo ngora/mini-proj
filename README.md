@@ -112,3 +112,21 @@ Plot properties:
 <pre><code>xmgrace summary.ETOT summary.EPTOT summary.EKTOT</code></pre>
 
 ![](https://github.com/ngora/mini-proj/blob/master/MD/summary.png)
+
+<p>Calculate overall RSMD of C-alpha atoms of the protein with respect to minimized structure</p>
+
+Scritp for <strong>cpptraj</strong>:
+<pre><code>trajin 02_Heat.nc
+trajin 03_Prod.nc
+reference 01_Min.ncrst
+rms reference :1-97@CA out 1_97.rms</code></pre>
+
+Run rms.cpptraj script:
+<pre><code>$AMBERHOME/bin/cpptraj -p 2GIV_ZAFF_solv.prmtop -i rmsd.cpptraj &> cpptraj.log</code></pre>
+
+
+
+
+
+
+

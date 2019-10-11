@@ -1,0 +1,77 @@
+
+CPPTRAJ: Trajectory Analysis. V17.00
+    ___  ___  ___  ___
+     | \/ | \/ | \/ | 
+    _|_/\_|_/\_|_/\_|_
+
+| Date/time: 10/11/19 14:16:11
+| Available memory: 288.559 MB
+
+	Reading '2GIV_ZAFF_solv.prmtop' as Amber Topology
+	Radius Set: modified Bondi radii (mbondi)
+INPUT: Reading input from 'rmsd.cpptraj'
+  [trajin 02_Heat.nc]
+	Reading '02_Heat.nc' as Amber NetCDF
+  [trajin 03_Prod.nc]
+	Reading '03_Prod.nc' as Amber NetCDF
+  [reference 01_Min.ncrst]
+	Reading '01_Min.ncrst' as Amber NC Restart
+	Setting active reference for distance-based masks: '01_Min.ncrst'
+  [rms reference :1-97@CA out 1_97.rms]
+    RMSD: (:1-97@CA), reference is "default_name" (:1-97@CA).
+	Best-fit RMSD will be calculated, coords will be rotated and translated.
+---------- RUN BEGIN -------------------------------------------------
+
+PARAMETER FILES (1 total):
+ 0: 2GIV_ZAFF_solv.prmtop, 36962 atoms, 11871 res, box: Orthogonal, 11774 mol, 11771 solvent
+
+INPUT TRAJECTORIES (2 total):
+ 0: '02_Heat.nc' is a NetCDF AMBER trajectory, Parm 2GIV_ZAFF_solv.prmtop (Orthogonal box) (reading 100 of 100)
+ 1: '03_Prod.nc' is a NetCDF AMBER trajectory, Parm 2GIV_ZAFF_solv.prmtop (Orthogonal box) (reading 80 of 80)
+  Coordinate processing will occur on 180 frames.
+
+REFERENCE FRAMES (1 total):
+    0: 01_Min.ncrst:1
+	Active reference frame for distance-based masks is 'default_name'
+
+BEGIN TRAJECTORY PROCESSING:
+.....................................................
+ACTION SETUP FOR PARM '2GIV_ZAFF_solv.prmtop' (1 actions):
+  0: [rms reference :1-97@CA out 1_97.rms]
+	Target mask: [:1-97@CA](97)
+	Reference mask: [:1-97@CA](97)
+Warning: Coordinates are being rotated and box coordinates are present.
+Warning: Unit cell vectors are NOT rotated; imaging will not be possible
+Warning:  after the RMS-fit is performed.
+----- 02_Heat.nc (1-100, 1) -----
+ 0% 10% 20% 30% 40% 50% 
+----- 03_Prod.nc (1-80, 1) -----
+60% 70% 80% 91% 100% Complete.
+
+Read 180 frames and processed 180 frames.
+TIME: Avg. throughput= 253.5151 frames / second.
+
+ACTION OUTPUT:
+
+DATASETS (1 total):
+	RMSD_00002 "RMSD_00002" (double, rms), size is 180
+
+DATAFILES (1 total):
+  1_97.rms (Standard Data File):  RMSD_00002
+
+RUN TIMING:
+TIME:		Init               : 0.0000 s (  0.00%)
+TIME:		Trajectory Process : 0.7100 s ( 99.91%)
+TIME:		Action Post        : 0.0000 s (  0.00%)
+TIME:		Analysis           : 0.0000 s (  0.00%)
+TIME:		Data File Write    : 0.0005 s (  0.07%)
+TIME:		Other              : 0.0002 s (  0.00%)
+TIME:	Run Total 0.7107 s
+---------- RUN END ---------------------------------------------------
+TIME: Total execution time: 0.8103 seconds.
+--------------------------------------------------------------------------------
+To cite CPPTRAJ use:
+Daniel R. Roe and Thomas E. Cheatham, III, "PTRAJ and CPPTRAJ: Software for
+  Processing and Analysis of Molecular Dynamics Trajectory Data". J. Chem.
+  Theory Comput., 2013, 9 (7), pp 3084-3095.
+
