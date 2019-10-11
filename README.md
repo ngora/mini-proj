@@ -83,9 +83,8 @@ Run production (The number of MD steps(<strong>nstlim</strong>) was reduced to 8
 <h2>5. Results of MD</h2>
 <p> We create an MD movie in Chimera using parm file, 2GIV_ZAFF_solv.prmtop, and trajectory file, 03_Prod.nc. Created .mp4 file was transformed to gif through giphy.com</p>
 
+![](Results/2GIV_ZAFF_Chimera.gif)
 https://media.giphy.com/media/Kcyn41HpXsOKXvez8T/giphy.gif
-<div style="width:100%;height:0;padding-bottom:73%;position:relative;"><iframe src="https://giphy.com/embed/Kcyn41HpXsOKXvez8T" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/Kcyn41HpXsOKXvez8T">via GIPHY</a></p>
-
 <p><strong>Figure 1.</strong> Molecular dynamics of 2GIV</p>
 
 
