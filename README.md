@@ -92,10 +92,16 @@ Run production (The number of MD steps(<strong>nstlim</strong>) was reduced to 8
 
 ![](Results/2GIV_ZAFF_Chimera1.gif)
 
-<p><strong>Figure 2.</strong> Tetrahedral coordination complex of 2GIV ZAFF</p>
+<p><strong>Figure 2.</strong> Tetrahedral coordination complex of 2GIV (ZAFF)</p>
 
 The next step is the processing of MD simulation temperature, density, total potential, and kinetic energies to the respective file sets through  <strong>process_mdout.perl</strong>:
 
 <pre><code>$AMBERHOME/bin/process_mdout.perl 02_Heat.out 03_Prod.out</code></pre>
+
+As the MD simulation density of heating doesn't include data points, We manually remove the empty data points for <strong>xmgrace</strong>(plotting program) to work. 
+
+Plot properties:
+<pre><code>xmgrace summary.TEMP</code></pre>
+![](/MD/summary.TEMP)
 
 
