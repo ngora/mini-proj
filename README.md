@@ -108,3 +108,7 @@ Plot properties:
 <pre><code>xmgrace summary.DENSITY</code></pre>
 
 ![](https://github.com/ngora/mini-proj/blob/master/MD/summary.DENS.png)
+
+<pre><code>xmgrace summary.ETOT summary.EPTOT summary.EKTOT</code></pre>
+
+![](
