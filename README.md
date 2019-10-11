@@ -8,7 +8,7 @@
 
 <h2>1. Clean up pdb file and add hydrogen atoms</p></h2>
 <p>leave information of atoms only in pdb:</p>
-<code>awk '$1=="ATOM" || $1=="HETATM" || $1=="TER" || $1=="END"' 2GIV.pdb > 2GIV_clean1.pdb</code>
+<pre><code>awk '$1=="ATOM" || $1=="HETATM" || $1=="TER" || $1=="END"' 2GIV.pdb > 2GIV_clean1.pdb</code></pre>
 
 
 <p>Manually, we delete the residues between ALY101 to PRO274 and the ligand ACO in the pdb
@@ -16,7 +16,7 @@
 
 <p>For renumbering IDs we use pdb4amber</p>
 
-<code>pdb4amber -i 2GIV_clean2.pdb > 2GIV_clean3.pdb</code>
+<pre><code>pdb4amber -i 2GIV_clean2.pdb > 2GIV_clean3.pdb</code></pre>
 
 <p>HIS residues protonation state was not determine (can be done through H++ website)</p>
 
@@ -30,7 +30,7 @@
 
 <p><strong>2GIV_ZAFF_tleap.in input file:</strong></p>
 <p>
-<font color="blue">load ff14SB force field <font color="red">(I had a problem:leaprc.ff14SB was not found. Solved: I added all possible paths to $AMBERHOME/bin/tleap shell script as it was indicated on <em>http://archive.ambermd.org/201605/0245.html</em> also $AMBEHROME/amber/dat/mtkpp/ZAFF/201108/ path added for necessary files for ZAFF)</font></font>:
+<style color="blue">load ff14SB force field <font color="red">(I had a problem:leaprc.ff14SB was not found. Solved: I added all possible paths to $AMBERHOME/bin/tleap shell script as it was indicated on <em>http://archive.ambermd.org/201605/0245.html</em> also $AMBEHROME/amber/dat/mtkpp/ZAFF/201108/ path added for necessary files for ZAFF)</font></style>:
 <pre><code>source leaprc.ff14SB</code></pre> 
 Add atom types for the ZAFF metal center with Center ID 4:
 <pre><code>addAtomTypes { { "ZN" "Zn" "sp3" } { "S3" "S" "sp3" } { "N2" "N" "sp3" } }</code> </pre>
@@ -77,8 +77,13 @@ Run minimization:
 Run heating:
 <pre><code> $AMBERHOME/bin/sander -O -i 02_Heat.in -o 02_Heat.out -c 01_Min.ncrst -p 2GIV_ZAFF_solv.prmtop -r 02_Heat.ncrst -x 02_Heat.nc</code></pre>
 
-Run production:
+Run production (The number of MD steps(<strong>nstlim</strong>) was reduced to 8000 to save the time of model building):
 <pre><code> $AMBERHOME/bin/sander -O -i 03_Prod.in -o 03_Prod.out -c 02_Heat.ncrst -p 2GIV_ZAFF_solv.prmtop -r 03_Prod.ncrst -x 03_Prod.nc</code></pre>
+
+<h2>5. Results of MD</h2>
+<p> We create an MD movie in Chimera using parm file, 2GIV_ZAFF_solv.prmtop, and trajectory file, 03_Prod.nc. Created .mp4 file was transformed to gif through giphy.com</p>
+<p>https://giphy.com/gifs/Kcyn41HpXsOKXvez8T/html5</p>
+<p><strong>Figure 1.</strong>Molecular dynamics of 2GIV</p>
 
 
 
