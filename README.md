@@ -102,6 +102,6 @@ As the MD simulation density of heating doesn't include data points, We manually
 
 Plot properties:
 <pre><code>xmgrace summary.TEMP</code></pre>
-![](/MD/summary.TEMP.png)
+![](MD/summary.TEMP.png)
 
 
