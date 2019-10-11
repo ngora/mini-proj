@@ -124,6 +124,7 @@ rms reference :1-97@CA out 1_97.rms</code></pre>
 Run rms.cpptraj script:
 <pre><code>$AMBERHOME/bin/cpptraj -p 2GIV_ZAFF_solv.prmtop -i rmsd.cpptraj &> cpptraj.log</code></pre>
 
+1[](https://github.com/ngora/mini-proj/blob/master/MD/1_97.png)
 
 
 
