@@ -94,4 +94,8 @@ Run production (The number of MD steps(<strong>nstlim</strong>) was reduced to 8
 
 <p><strong>Figure 2.</strong> Tetrahedral coordination complex of 2GIV ZAFF</p>
 
+The next step is the processing of MD simulation temperature, density, total potential, and kinetic energies to the respective file sets through  <strong>process_mdout.perl</strong>:
+
+<pre><code>$AMBERHOME/bin/process_mdout.perl 02_Heat.out 03_Prod.out</code></pre>
+
 
