@@ -105,4 +105,6 @@ Plot properties:
 
 ![](https://github.com/ngora/mini-proj/blob/master/MD/summary.TMP.png)
 
+<pre><code>xmgrace summary.DENSITY</code></pre>
 
+![](ihttps://github.com/ngora/mini-proj/blob/master/MD/summary.DENS.png)
