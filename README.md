@@ -81,11 +81,17 @@ Run production (The number of MD steps(<strong>nstlim</strong>) was reduced to 8
 <pre><code> $AMBERHOME/bin/sander -O -i 03_Prod.in -o 03_Prod.out -c 02_Heat.ncrst -p 2GIV_ZAFF_solv.prmtop -r 03_Prod.ncrst -x 03_Prod.nc</code></pre>
 
 <h2>5. Results of MD</h2>
-<p> We create an MD movie in Chimera using parm file, 2GIV_ZAFF_solv.prmtop, and trajectory file, 03_Prod.nc. Created .mp4 file was transformed to gif through giphy.com</p>
+<p> We create an MD movie in Chimera using parm file, 2GIV_ZAFF_solv.prmtop, and trajectory file, 03_Prod.nc. Created .mp4 file was transformed to gif through giphy.com (Fig. 1)</p>
 
 ![](Results/2GIV_ZAFF_Chimera.gif)
-https://media.giphy.com/media/Kcyn41HpXsOKXvez8T/giphy.gif
+
 <p><strong>Figure 1.</strong> Molecular dynamics of 2GIV</p>
 
+
+<p>In Chimera, the ligand residues and Zn atom with distances were generated (Fig. 2)</p>
+
+![](Results/2GIV_ZAFF_Chimera.gif)
+
+<p><strong>Figure 2.</strong> Tetrahedral coordination complex of 2GIV ZAFF</p>
 
 
