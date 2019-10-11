@@ -111,4 +111,4 @@ Plot properties:
 
 <pre><code>xmgrace summary.ETOT summary.EPTOT summary.EKTOT</code></pre>
 
-![](
+![](https://github.com/ngora/mini-proj/blob/master/MD/summary.png)
