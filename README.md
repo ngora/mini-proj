@@ -101,7 +101,7 @@ The next step is the processing of MD simulation temperature, density, total pot
 As the MD simulation density of heating doesn't include data points, We manually remove the empty data points for <strong>xmgrace</strong>(plotting program) to work. 
 
 Plot properties:
-<pre><code>xmgrace summary.TEMP</code></pre>
+<pre><code>xmgrace summary.TMp.png</code></pre>
 ![](/MD/summary.TEMP)
 
 
